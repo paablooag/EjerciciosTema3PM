@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             Contacto(R.drawable.ic_launcher_foreground,"Miguel", "miguel@example.com", 603333444),
             Contacto(R.drawable.ic_launcher_foreground,"Natalia", "natalia@example.com", 603555666),
             Contacto(R.drawable.ic_launcher_foreground,"Antonio", "antonio@example.com", 603777888)
-
         )
         contactoAdaptador = ContactoAdaptador(data,this)
 
