@@ -1,7 +1,9 @@
 package com.example.ejerciciostema3pm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejerciciostema3pm.databinding.ActivityMainBinding
 
@@ -23,24 +25,20 @@ class MainActivity : AppCompatActivity() {
             Contacto(R.drawable.pito8,"Luisa", "luisa@example.com", 600333444),
             Contacto(R.drawable.pito9,"Juan", "juan@example.com", 600555666),
             Contacto(R.drawable.pito6,"Raquel", "raquel@example.com", 601111222),
-            Contacto(R.drawable.pito6,"Ana María", "anamaria@example.com", 601555666),
-            Contacto(R.drawable.ic_launcher_foreground,"Carlos", "carlos@example.com", 601777888),
-            Contacto(R.drawable.pito9,"Isabel", "isabel@example.com", 601999000),
-            Contacto(R.drawable.ic_launcher_foreground,"Fernando", "fernando@example.com", 602111222),
-            Contacto(R.drawable.ic_launcher_foreground,"Laura", "laura@example.com", 602333444),
-            Contacto(R.drawable.ic_launcher_foreground,"Manuel", "manuel@example.com", 602555666),
-            Contacto(R.drawable.ic_launcher_foreground,"Silvia", "silvia@example.com", 602777888),
-            Contacto(R.drawable.ic_launcher_background,"José", "jose@example.com", 602999000),
-            Contacto(R.drawable.ic_launcher_foreground,"Beatriz", "beatriz@example.com", 603111222),
-            Contacto(R.drawable.ic_launcher_foreground,"Miguel", "miguel@example.com", 603333444),
-            Contacto(R.drawable.ic_launcher_foreground,"Natalia", "natalia@example.com", 603555666),
-            Contacto(R.drawable.ic_launcher_foreground,"Antonio", "antonio@example.com", 603777888)
+            Contacto(R.drawable.pito6,"Ana María", "anamaria@example.com", 601555666)
         )
+
         contactoAdaptador = ContactoAdaptador(data,this)
 
         binding.recyclerView.apply {
             layoutManager=LinearLayoutManager(this@MainActivity)
             adapter=contactoAdaptador
+        }
+    }
+
+    fun ejercicio2(view: View) {
+        Intent (this, Ejercicio2::class.java).also {
+            startActivity(it)
         }
     }
 }

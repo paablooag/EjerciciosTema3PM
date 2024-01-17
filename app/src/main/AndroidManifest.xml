@@ -13,6 +13,12 @@
         android:theme="@style/Theme.EjerciciosTema3PM"
         tools:targetApi="31">
         <activity
+            android:name=".Ejercicio3"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
