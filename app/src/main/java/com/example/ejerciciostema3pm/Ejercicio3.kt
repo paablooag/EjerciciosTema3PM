@@ -35,15 +35,6 @@ class Ejercicio3 : AppCompatActivity() {
                 adapter=itemAdaptador
                 adapter!!.notifyDataSetChanged()
             }
-
-
-
         }
-
-
-
-
     }
-
-
 }
