@@ -21,7 +21,6 @@ class ContactoAdaptador(var listaContacto: MutableList<Contacto>, private val li
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val contacto = listaContacto.get(position)
-        holder.binding
 
         holder.binding.nombreContacto.text=contacto.nombre
         holder.binding.correoContacto.text=contacto.correo

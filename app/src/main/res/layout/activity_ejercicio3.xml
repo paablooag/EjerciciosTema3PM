@@ -6,44 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".Ejercicio3">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/anadirView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/ejercicio4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:onClick="ejercicio4"
-            android:text="Ejercicio4" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/ejercicio4"
-            android:layout_marginTop="16dp" />
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_nuevo"
+        />
 
     <Button
-        android:id="@+id/añadirPokemon"
+        android:id="@+id/añadir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Añadir Pokemon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/eliminarPokemon" />
+        android:text="Añadir"
+        />
 
-    <Button
-        android:id="@+id/eliminarPokemon"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/capturedView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eliminar Pokemon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/añadirPokemon"/>
+        app:layout_constraintTop_toBottomOf="@+id/anadirView"
+        tools:listitem="@layout/item_nuevo"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
