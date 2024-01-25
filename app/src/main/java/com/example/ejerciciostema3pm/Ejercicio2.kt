@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejerciciostema3pm.databinding.ActivityEjercicio2Binding
-
 class Ejercicio2 : AppCompatActivity() {
     private lateinit var binding: ActivityEjercicio2Binding
     private lateinit var ajedrezAdaptador: AjedrezAdaptador
@@ -36,8 +35,7 @@ class Ejercicio2 : AppCompatActivity() {
 
     }
     fun ejercicio3(view: View) {
-        Intent (this, Ejercicio3::class.java).also {
-            startActivity(it)
-        }
+        var newIntent= Intent(this,AnadirItems::class.java)
+        startActivity(newIntent)
     }
 }

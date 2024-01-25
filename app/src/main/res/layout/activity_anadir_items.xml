@@ -4,12 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ejercicio3">
+    tools:context=".AnadirItems">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/anadirView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separador"
+        tools:listitem="@layout/item_nuevo"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@id/anadirView"
+        app:layout_constraintBottom_toTopOf="@id/anadirViewCheck"
+        android:background="@color/black"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/anadirViewCheck"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@id/separador"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_nuevo"
         />
 
@@ -21,14 +41,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Añadir"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/capturedView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/anadirView"
-        tools:listitem="@layout/item_nuevo"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
